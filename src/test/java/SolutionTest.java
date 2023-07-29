@@ -23,4 +23,14 @@ public class SolutionTest {
 
         Assert.assertTrue(result);
     }
+
+    @Test
+    public void findRedundantConnectionTest3() {
+        int[][] edges = {{1, 5}, {3, 4}, {3, 5}, {4, 5}, {2, 4}};
+        int[] expected = {1, 4};
+        int[] actual = new Solution().findRedundantConnection(edges);
+        boolean result = Arrays.equals(expected, actual);
+
+        Assert.assertTrue(result);
+    }
 }
